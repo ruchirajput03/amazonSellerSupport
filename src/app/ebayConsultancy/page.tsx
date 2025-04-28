@@ -31,7 +31,7 @@ export default function Home() {
                             <div className="col-lg-10">   <p className="text-[#5C5C5C]">Unlock the full potential of eBay in the UAE with expert local support. Whether you&apos;re a new seller or looking to scale, our eBay consultancy services are built to help you succeed in one of the region&apos;s fastest-growing online marketplaces. From account setup to sales optimization, we provide tailored solutions that drive real results—right here in the UAE.</p></div>
                             <div className="mt-10 col-lg-3">
                         <Link href="/contactus" className="!no-underline">
-                          <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full px-5 py-2">
+                          <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full px-4 w-full py-2">
                             Contact Us
                           </p>
                         </Link>
@@ -51,7 +51,7 @@ export default function Home() {
                     <div className="col-lg-6 ">
                         <div className="flex justify-center">
                         <div className="col-lg-9 ">
-                            <div className="flex gap-4 justify-center">
+                            <div className="lg:flex gap-4 justify-center">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector3.svg"
@@ -66,7 +66,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center ">
+                            <div className="lg:flex gap-4 justify-center ">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector3.svg"
@@ -81,7 +81,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center">
+                            <div className="lg:flex gap-4 justify-center">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector3.svg"
@@ -95,7 +95,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center ">
+                            <div className="lg:flex gap-4 justify-center ">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector3.svg"
@@ -144,7 +144,7 @@ export default function Home() {
                     <div className="col-lg-6 ">
                         <div className="flex justify-center">
                         <div className="col-lg-9 ">
-                            <div className="flex gap-4 justify-center">
+                            <div className="lg:flex gap-4 justify-center">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector3.svg"
@@ -158,7 +158,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center ">
+                            <div className="lg:flex gap-4 justify-center ">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector3.svg"
@@ -173,7 +173,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center ">
+                            <div className="lg:flex gap-4 justify-center ">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector3.svg"

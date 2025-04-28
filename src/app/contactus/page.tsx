@@ -46,7 +46,7 @@ export default function ContactForm() {
     return (
         <>
         <Header/>
-        <section className="lg:px-[100px] px-[40px] bg-[#FFF] lg:pt-[150px] pt-[150px] overflow-hidden pb-[40px]">
+        <section className="lg:px-[100px] px-[40px] bg-[#FFF] lg:pt-[150px] pt-[100px] overflow-hidden pb-[40px]">
             <div className="flex justify-center">
         <div className="col-lg-8 pt-[80px]">
             <h1 className="text-2xl font-bold text-center mb-2">Ready to Elevate Your Sales? Let&apos;s Connect!</h1>

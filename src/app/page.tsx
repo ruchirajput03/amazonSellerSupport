@@ -1,48 +1,57 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import Header from './components/header';
 import Footer from './components/footer';
+import React, { useEffect } from 'react';
+
 
 export default function Home() {
+  // Add this in your component's useEffect or similar
+useEffect(() => {
+  const itemCount = document.querySelectorAll('.marquee-content > div').length / 2;
+  document.documentElement.style.setProperty('--item-count', itemCount.toString());
+}, []);
+
   return (
     <>
       <Header />
-      <section className="lg:px-[100px] px-[40px] bg-[#000124] lg:pt-[150px] pt-[200px] overflow-hidden">
-  <div className="relative lg:pt-[100px]">
-    <Image 
-    alt=""  width={1080}  height={1080}  
-   
-      src="/assets/Group 17812.png"
-    
-      className="w-full lg:h-auto"
-    />
+      <section className="lg:px-[100px] px-[40px] bg-[#000124] lg:pt-[200px] lg:h-screen items-center pt-[200px] overflow-hidden">
+        <div className="relative lg:pt-[100px]">
+          <Image
+            alt="" width={1080} height={1080}
 
-    <div className="absolute bottom-0 lg:!bottom-[500px] left-1/2 transform -translate-x-1/2 text-white text-center px-4 mb-4">
-      <p className="text-lg lg:text-[2.8vw] text-[3.2vw] font-bold lg:leading-[3.2vw]">
-        Become an <span className="text-[#7C99FF]">UAE Seller</span> & Simplify your path to <span className="text-[#D33A93]">Global Success</span>
-      </p>
+            src="/assets/Group 17812.png"
 
-      <div className="flex justify-center">
-        <div className="text-center mb-4 lg:text-[1vw] text-[2vw]">
-          <p>Pay lesser selling fee* with every order on Dubai&apos;s most visited online shopping destination.</p>
+            className="w-full lg:h-auto"
+          />
+
+          <div className="absolute bottom-[20px] lg:!bottom-[300px] left-1/2 transform -translate-x-1/2 text-white text-center px-4 mb-4 lg:w-auto w-full">
+            <p className="text-lg lg:text-[2.8vw] text-[3.2vw] font-bold lg:leading-[3.2vw]">
+              Become an <span className="text-[#7C99FF]">UAE Seller</span> & Simplify your path to <span className="text-[#D33A93]">Global Success</span>
+            </p>
+
+            <div className="flex justify-center">
+              <div className="text-center mb-4 lg:text-[1vw] text-[2vw]">
+                <p>Pay lesser selling fee* with every order on Dubai&apos;s most visited online shopping destination.</p>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <div>
+                <Link href="/contactus">
+                  <Image alt="" width={1080} height={1080}
+
+                    src="/assets/Link.svg"
+
+                    className="w-[250px] h-auto"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="flex justify-center">
-        <div>
-          <Link href="/contactus">
-            <Image alt=""  width={1080}  height={1080}  
-
-              src="/assets/Link.svg"
-             
-              className="w-[250px] h-auto"
-            />
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       <section className="lg:px-[100px] px-[40px] bg-[#FFF] lg:pt-[100px] pt-[50px] overflow-hidden  mb-4">
@@ -50,50 +59,50 @@ export default function Home() {
         <div className="col-lg-12 mb-4">
           <div className="flex justify-center">
             <div className="col-lg-10">
-              <div className="lg:flex">
+              <div className="lg:flex items-center">
                 <div className="col-lg-6 mb-4">
                   <div className="col-lg-10">
-                    <Image alt=""  width={1080}  height={1080}  
+                    <Image alt="" width={1080} height={1080}
                       src="/assets/Multinational people discussing and drinking coffee.png"
-                      
+
                       className="w-full h-auto"
                     />
                   </div>
                 </div>
                 <div className="col-lg-6 mb-4">
                   <div className="col-lg-8 ">
-                    <div className="flex gap-2">
-                      <div className="col-lg-1">
-                        <Image alt=""  width={1080}  height={1080}  
+                    <div className="flex gap-2 items-center">
+                      <div className="col-lg-1 mb-2">
+                        <Image alt="" width={1080} height={1080}
                           src="/assets/blue icon of house.svg"
-                         
+
                           className="w-[40px]"
                         />
                       </div>
                       <div className="col-lg-8 mb-2">
-                        <p className="lg:text-[1.2vw] text-[4vw] font-semibold text-black">Widespread Market Reach</p>
+                        <p className="lg:text-[1.2vw] text-[4vw] font-semibold text-black p-0 m-0">Widespread Market Reach</p>
 
 
                       </div>
 
                     </div>
                     <div className="div">
-                      <p className="">With a presence in 11+ strategic markets totaling over 1.5 billion people, amazon seller support connects you to a vast customer base and accelerates your business expansion.</p>
+                      <p className="lg:text-[1vw] text-[3vw]">With a presence in 11+ strategic markets totaling over 1.5 billion people, amazon seller support connects you to a vast customer base and accelerates your business expansion.</p>
                     </div>
 
                   </div>
                   <div className="col-lg-8 mt-4">
-                    <div className="flex gap-2">
-                      <div className="col-lg-1">
-                        <Image 
-                        alt=""  width={1080}  height={1080}  
+                    <div className="flex gap-2 items-center">
+                      <div className="col-lg-1 mb-2 ">
+                        <Image
+                          alt="" width={1080} height={1080}
                           src="/assets/blue icon of world.svg"
-                         
+
                           className="w-[40px]"
                         />
                       </div>
                       <div className="col-lg-8 mb-2">
-                        <p className="lg:text-[1.2vw] text-[4vw] font-semibold text-black">End-to-End Services</p>
+                        <p className="lg:text-[1.2vw] text-[4vw] font-semibold text-black p-0 m-0">End-to-End Services</p>
 
 
                       </div>
@@ -105,16 +114,16 @@ export default function Home() {
 
                   </div>
                   <div className="col-lg-8 mt-4">
-                    <div className="flex gap-2">
-                      <div className="col-lg-1">
-                        <Image alt=""  width={1080}  height={1080}  
+                    <div className="flex gap-2 items-center">
+                      <div className="col-lg-1 mb-2 ">
+                        <Image alt="" width={1080} height={1080}
                           src="/assets/blue icon of rocket.svg"
-                         
+
                           className="w-[40px]"
                         />
                       </div>
                       <div className="col-lg-8 mb-2">
-                        <p className="lg:text-[1.2vw] text-[4vw] font-semibold text-black">Quick and Efficient Solutions</p>
+                        <p className="lg:text-[1.2vw] text-[4vw] font-semibold text-black p-0 m-0 ">Quick and Efficient Solutions</p>
 
 
                       </div>
@@ -136,13 +145,13 @@ export default function Home() {
 
           <div className="col-lg-12 mb-4">
 
-            <div className="lg:flex">
+            <div className="lg:flex items-center">
 
               <div className="col-lg-6 mb-4">
 
 
 
-                <div className="col-lg-7 mb-4">
+                <div className="col-lg-8 mb-4">
                   <p className="lg:text-[1.5vw] text-[4vw] font-bold text-black">Specialized Consultancy Services for Amazon, Noon, and eBay to Drive Your Business Growth.</p>
 
 
@@ -155,8 +164,8 @@ export default function Home() {
                 <div className="col-lg-8 mb-4">
                   <p className="">From account setup and product listings to advertising and sales optimization, we offer the expertise necessary to help you succeed across every marketplace.</p>
                 </div>
-                <div className="col-lg-4 mb-4">
-                  <Link href="" className=" !no-underline"> <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full px-4 py-2 ">About Amazon Seller Support</p></Link>
+                <div className="col-lg-6 mb-4">
+                  <Link href="" className=" !no-underline"> <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full w-full py-2 ">About Amazon Seller Support</p></Link>
                 </div>
 
 
@@ -164,9 +173,9 @@ export default function Home() {
               </div>
               <div className="col-lg-6 mb-4">
                 <div className="col-lg-12">
-                  <Image alt=""  width={1080}  height={1080}  
+                  <Image alt="" width={1080} height={1080}
                     src="/assets/ecommerce seo dubai.png"
-                  
+
                     className="w-full h-auto"
                   />
                 </div>
@@ -230,9 +239,9 @@ export default function Home() {
                       </div>
 
 
-                      <div className="mt-10 col-lg-5">
+                      <div className="mt-10 col-lg-7">
                         <Link href="#" className="!no-underline">
-                          <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full px-5 py-2">
+                          <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full w-full px-4  py-2">
                             Contact Us
                           </p>
                         </Link>
@@ -253,7 +262,7 @@ export default function Home() {
               <div className="lg:flex gap-8">
                 {[...Array(3)].map((_, index) => (
                   <div key={index} className="col-lg-4 mb-4">
-                   
+
                     <div className="h-full flex flex-col justify-between bg-white rounded-2xl px-8 pt-8 pb-6 shadow-sm">
 
 
@@ -297,9 +306,9 @@ export default function Home() {
                       </div>
 
 
-                      <div className="mt-10 col-lg-5">
+                      <div className="mt-10 col-lg-7">
                         <Link href="#" className="!no-underline">
-                          <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full px-5 py-2">
+                          <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full px-4 w-full  py-2">
                             Contact Us
                           </p>
                         </Link>
@@ -315,168 +324,147 @@ export default function Home() {
 
       </section>
       <section className="lg:px-[100px] px-[40px] bg-[#FFF] lg:pt-[80px] pt-[50px] overflow-hidden">
-      <div className="col-lg-12 text-center lg:pt-[50px] pt-[20px] mb-4">
+        <div className="col-lg-12 text-center lg:pt-[50px] pt-[20px] mb-4">
           <p className="lg:text-[2vw] lg:leading-[2vw] p-0  text-[4vw] font-bold text-[#0B3655]"> Our Process</p>
-          </div>
-          <div className="lg:pt-[50px] pt-[20px] pb-[50px]">
+        </div>
+        <div className="lg:pt-[50px] pt-[20px] pb-[50px]">
           <div className="lg:flex justify-center ">
-          <div className="col-lg-10">
-            <div className="lg:flex gap-8 ">
-          <div className="col-lg-6 mb-4">
-
             <div className="col-lg-10">
-              <div className="flex gap-4">
-              <div className="col-lg-2">
-                <Image alt=""  width={1080}  height={1080}   
-                src="/assets/pr2.svg"
-                />
-              </div>
-              <div className="col-lg-10 mb-4">
-                <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">1.Introductory Consultation</p>
-                <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">We start by gaining a deep understanding of your business, goals, and challenges through a comprehensive consultation. This allows us to craft a customized roadmap tailored to your needs on Amazon, Noon, and eBay.</p>
-              </div>
-         
-            </div>
-              <div className="flex gap-4">
-              <div className="col-lg-2">
-                <Image alt=""  width={1080}  height={1080}   
-                src="/assets/pr2.svg"
-                />
-              </div>
-              <div className="col-lg-10 mb-4">
-                <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">2. Account Registration & Compliance</p>
-                <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">Our team ensures your seller accounts are properly set up and fully compliant with marketplace policies. From tax configurations to category approvals, we manage every detail to ensure a smooth start.</p>
-              </div>
-         
-            </div>
-              <div className="flex gap-4">
-              <div className="col-lg-2">
-                <Image alt=""  width={1080}  height={1080}   
-                src="/assets/pr2.svg"
-                />
-              </div>
-              <div className="col-lg-10 mb-4">
-                <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">3. Product Listing Enhancement</p>
-                <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">We craft and optimize your product listings with compelling content, SEO-driven keywords, and high-quality visuals to boost visibility and increase conversions.</p>
-              </div>
-         
-            </div>
-            </div>
-            </div>
+              <div className="lg:flex gap-8 ">
+                <div className="col-lg-6 mb-4">
 
-            <div className="col-lg-6 mb-4">
-            <div className="col-lg-10">
-              <div className="flex gap-4">
-              <div className="col-lg-2">
-                <Image alt=""  width={1080}  height={1080}   
-                src="/assets/pr2.svg"
-                />
+                  <div className="col-lg-10">
+                    <div className="lg:flex gap-4">
+                      <div className="col-lg-2">
+                        <Image alt="" width={1080} height={1080}  className="lg:w-full w-[60px]"
+                          src="/assets/pr2.svg"
+                        />
+                      </div>
+                      <div className="col-lg-10 mb-4">
+                        <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">1.Introductory Consultation</p>
+                        <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">We start by gaining a deep understanding of your business, goals, and challenges through a comprehensive consultation. This allows us to craft a customized roadmap tailored to your needs on Amazon, Noon, and eBay.</p>
+                      </div>
+
+                    </div>
+                    <div className="lg:flex  gap-4">
+                      <div className="col-lg-2">
+                        <Image alt="" width={1080} height={1080}
+                          src="/assets/pr2.svg"
+                          className="lg:w-full w-[60px]"
+                        />
+                      </div>
+                      <div className="col-lg-10 mb-4">
+                        <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">2. Account Registration & Compliance</p>
+                        <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">Our team ensures your seller accounts are properly set up and fully compliant with marketplace policies. From tax configurations to category approvals, we manage every detail to ensure a smooth start.</p>
+                      </div>
+
+                    </div>
+                    <div className="lg:flex  gap-4">
+                      <div className="col-lg-2">
+                        <Image alt="" width={1080} height={1080}
+                          src="/assets/pr2.svg"
+                          className="lg:w-full w-[60px]"
+                        />
+                      </div>
+                      <div className="col-lg-10 mb-4">
+                        <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">3. Product Listing Enhancement</p>
+                        <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">We craft and optimize your product listings with compelling content, SEO-driven keywords, and high-quality visuals to boost visibility and increase conversions.</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 mb-4">
+                  <div className="col-lg-10">
+                    <div className="lg:flex  gap-4">
+                      <div className="col-lg-2">
+                        <Image alt="" width={1080} height={1080}
+                          src="/assets/pr2.svg"
+                          className="lg:w-full w-[60px]"
+                        />
+                      </div>
+                      <div className="col-lg-10 mb-4">
+                        <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">4. Advertising & Promotional Campaigns</p>
+                        <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">We design and manage targeted PPC and promotional campaigns to optimize your reach and ROI, ensuring your products shine in competitive marketplaces.</p>
+                      </div>
+
+                    </div>
+                    <div className="lg:flex  gap-4">
+                      <div className="col-lg-2">
+                        <Image alt="" width={1080} height={1080}
+                          src="/assets/pr2.svg"
+                          className="lg:w-full w-[60px]"
+                        />
+                      </div>
+                      <div className="col-lg-10 mb-4">
+                        <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">5. Performance Tracking & Analytics</p>
+                        <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">We consistently monitor your account&apos;s performance, analyzing sales data, customer feedback, and key metrics to uncover growth opportunities and areas for improvement.</p>
+                      </div>
+
+                    </div>
+                    <div className="lg:flex  gap-4">
+                      <div className="col-lg-2">
+                        <Image alt="" width={1080} height={1080}
+                          src="/assets/pr2.svg"
+                          className="lg:w-full w-[60px]"
+                        />
+                      </div>
+                      <div className="col-lg-10 mb-4">
+                        <p className="lg:text-[1vw] text-[3vw] font-semibold p-0 m-0">6. Continuous Support & Business Growth</p>
+                        <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">Our team offers regular updates, strategic insights, and proactive solutions to support your business growth. Whether addressing challenges or exploring new opportunities, we&apos;re here to assist at every stage.</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="col-lg-10 mb-4">
-                <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">4. Advertising & Promotional Campaigns</p>
-                <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">We design and manage targeted PPC and promotional campaigns to optimize your reach and ROI, ensuring your products shine in competitive marketplaces.</p>
-              </div>
-         
             </div>
-              <div className="flex gap-4">
-              <div className="col-lg-2">
-                <Image alt=""  width={1080}  height={1080}   
-                src="/assets/pr2.svg"
-                />
-              </div>
-              <div className="col-lg-10 mb-4">
-                <p className="lg:text-[1vw] text-[3vw] text-[#0B3655] font-semibold p-0 m-0">5. Performance Tracking & Analytics</p>
-                <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">We consistently monitor your account&apos;s performance, analyzing sales data, customer feedback, and key metrics to uncover growth opportunities and areas for improvement.</p>
-              </div>
-         
-            </div>
-              <div className="flex gap-4">
-              <div className="col-lg-2">
-                <Image alt=""  width={1080}  height={1080}   
-                src="/assets/pr2.svg"
-                />
-              </div>
-              <div className="col-lg-10 mb-4">
-                <p className="lg:text-[1vw] text-[3vw] font-semibold p-0 m-0">6. Continuous Support & Business Growth</p>
-                <p className="lg:text-[0.8vw] lg:leading-[1vw] font-medium text-[3vw] text-[#666666] mt-2">Our team offers regular updates, strategic insights, and proactive solutions to support your business growth. Whether addressing challenges or exploring new opportunities, we&apos;re here to assist at every stage.</p>
-              </div>
-         
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-           
-          
-            </div>
-     
-      
-        </section>
-        <section className="lg:px-[100px] px-[40px] bg-[#F2F2F2] lg:pt-[80px] pt-[50px] overflow-hidden pb-[80px]">
+          </div>
+
+
+        </div>
+
+
+      </section>
+      <section className="lg:px-[100px] px-[40px] bg-[#F2F2F2] lg:pt-[80px] pt-[50px] overflow-hidden pb-[80px]">
         <div className="col-lg-12 text-center lg:pt-[50px] pt-[20px] mb-4">
           <p className="lg:text-[2vw] lg:leading-[2vw] p-0  text-[4vw] font-bold text-[#0B3655]"> Our Proven Results</p>
-          <div className="lg:pt-[40px] pt-[20px] mb-4 marquee-anim">
-            <div className="flex gap-4">
-            <div className="col-lg-4 ">
-              <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu1.png"
-              className="w-full "
-              />
-            </div>
-            <div className="col-lg-4">
-            <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu2.png"
-              className="w-full h-full"
-              />
-            </div>
-            <div className="col-lg-4">
-            <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu3.png"
-              className="w-full h-full"
-              />
-            </div>
-            <div className="col-lg-4">
-            <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu4.png"
-              className="w-full h-full"
-              />
-            </div>
-            <div className="col-lg-4">
-            <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu5.png"
-              className="w-full h-full"
-              />
-            </div>
-            <div className="col-lg-4">
-            <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu6.png"
-              className="w-full h-full"
-              />
-            </div>
-            <div className="col-lg-4">
-            <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu3.png"
-              className="w-full h-full"
-              />
-            </div>
-            <div className="col-lg-4">
-            <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu7.png"
-              className="w-full h-full"
-              />
-            </div>
-            <div className="col-lg-4">
-            <Image alt=""  width={1080}  height={1080}  
-              src="/assets/marqu8.png"
-              className="w-full h-full"
-              />
-            </div>
-            
-
-          </div>
-          </div>
-          <div className="lg:pt-[40px] pt-[20px] mb-4 marquee-anim ">
+          <div className="lg:pt-[40px] pt-[20px] mb-4 overflow-hidden relative">
+  <div className="flex marquee-container">
+    {/* Original images */}
+    <div className="flex gap-4 marquee-content">
+      {Array.from({length: 100}).map((_, i) => (
+        <div key={`original-${i}`} className="w-[300px] h-[200px] md:w-[400px] md:h-[250px] flex-shrink-0">
+          <Image
+            alt={`marquee-image-${i+1}`}
+            width={400}
+            height={250}
+            src={`/assets/marqu${(i % 8) + 1}.png`} // Assuming you have 8 images that repeat
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+    </div>
+    
+    {/* Duplicate clone for seamless looping */}
+    <div className="flex gap-4 marquee-content">
+      {Array.from({length: 100}).map((_, i) => (
+        <div key={`clone-${i}`} className="w-[300px] h-[200px] md:w-[400px] md:h-[250px] flex-shrink-0">
+          <Image
+            alt={`marquee-image-${i+1}`}
+            width={400}
+            height={250}
+            src={`/assets/marqu${(i % 8) + 1}.png`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+    </div>
+    
+  </div>
+</div>
+          {/* <div className="lg:pt-[40px] pt-[20px] mb-4 marquee-anim ">
             <div className="flex gap-8">
             <div className="col-lg-1 ">
               <Image alt=""  width={1080}  height={1080}  
@@ -576,11 +564,11 @@ export default function Home() {
             </div>
            
             </div>
-            </div>
-          </div>
-          </section>
+            </div> */}
+        </div>
+      </section>
 
-        <Footer/>
+      <Footer />
     </>
   );
 }

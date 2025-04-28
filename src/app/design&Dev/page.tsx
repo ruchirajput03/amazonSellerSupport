@@ -31,7 +31,7 @@ export default function Home() {
                             <div className="col-lg-10">   <p className="text-[#5C5C5C]">In today’s digital world, a strong online presence is crucial for business success. Whether you need a sleek portfolio, a robust e-commerce site, or a corporate platform, the right web design and development strategy can help you stand out. Our web design and development services are crafted to build websites that not only look great but also perform at their best, driving growth and engagement.</p></div>
                             <div className="mt-10 col-lg-3">
                         <Link href="/contactus" className="!no-underline">
-                          <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full px-5 py-2">
+                          <p className="border text-white !border-[#D33A93] text-center bg-[#D33A93] rounded-full px-4 e-full py-2">
                             Contact Us
                           </p>
                         </Link>
@@ -51,7 +51,7 @@ export default function Home() {
                     <div className="col-lg-6 ">
                         <div className="flex justify-center">
                         <div className="col-lg-9 ">
-                            <div className="flex gap-4 justify-center">
+                            <div className="lg:flex gap-4 justify-center">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector2.svg"
@@ -66,7 +66,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center ">
+                            <div className="lg:flex gap-4 justify-center ">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector2.svg"
@@ -81,7 +81,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center">
+                            <div className="lg:flex gap-4 justify-center">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector2.svg"
@@ -130,7 +130,7 @@ export default function Home() {
                     <div className="col-lg-6 ">
                         <div className="flex justify-center">
                         <div className="col-lg-9 ">
-                            <div className="flex gap-4 justify-center">
+                            <div className="lg:flex gap-4 justify-center">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector2.svg"
@@ -144,7 +144,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center ">
+                            <div className="lg:flex gap-4 justify-center ">
                             <div className="col-lg-1">
                                 <Image alt=""  width={1080}  height={1080}  
                                  src="/assets/vector2.svg"
@@ -159,7 +159,7 @@ export default function Home() {
                         </div>
                         </div>
                         <div className=" lg:mt-[40px] mt-[20px]">
-                            <div className="flex gap-4 justify-center ">
+                            <div className="lg:flex gap-4 justify-center ">
                         
                         </div>
                         <div className=" lg:mt-[250px] mt-[40px]">

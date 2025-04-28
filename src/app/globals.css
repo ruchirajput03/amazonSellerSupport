@@ -28,74 +28,32 @@ body {
   color: var(--foreground);
 font-family: 'Inter_fn' !important;
 }
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
+.marquee-container {
+  display: flex;
+  width: fit-content;
+}
 
+.marquee-content {
+  display: flex;
+  animation: marquee-scroll linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
   100% {
     transform: translateX(-100%);
   }
 }
-@keyframes marquee_marquee__1 {
-  0% {
-    transform: translateX(0px)
-  }
 
-  to {
-    transform: translateX(-2413px);
-  }
+/* Dynamic animation duration based on item count */
+.marquee-content {
+  animation-duration: calc(100s * (var(--item-count) / 10));
 }
 
-.animate-marquee {
-  animation: marquee 15s linear infinite;
-  display: flex;
-  will-change: transform;
-  visibility: visible;
-  white-space: nowrap;
-}
-
-
-.marquee-anim {
-  animation: marquee-anim 15s linear infinite;
-}
-
-@keyframes marquee-anim {
-  0% {
-    transform: translateX(0)
-  }
-
-  to {
-    transform: translateX(-100vw)
+@media (max-width: 768px) {
+  .marquee-content {
+    animation-duration: calc(50s * (var(--item-count) / 10));
   }
 }
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-.marquee {
-  display: flex;
-  white-space: nowrap;
-  animation: marquee 20s linear infinite;
-}
-/* Custom styles (optional, if you want to preserve the exact styling) */
-
-.progress {
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
-}
-
